@@ -31,15 +31,15 @@ const tablesData = [
     { id: 2, name: "โต๊ะ 2", isOccupied: false },
     { id: 3, name: "โต๊ะ 3", isOccupied: false },
     // เพิ่มข้อมูลโต๊ะเพิ่มเติมตามต้องการ
-  ];
-  
-  function Menu() {
+];
+
+function Menu() {
     return (
-      <div className="menu">
-        <TableList tables={tablesData} />
-      </div>
+        <div className="menu">
+            <TableList tables={tablesData} />
+        </div>
     );
-  }
+}
 function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary" align="center">
@@ -59,13 +59,13 @@ const defaultTheme = createTheme();
 export default function Album() {
     const [menu, setMenu] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:3000/menu/dish")
-        .then(res => res.json())
-        .then(
-          (result) => {
-            setMenu(result);
-          },
-        )
+        fetch("http://localhost:3000/menu/snack")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    setMenu(result);
+                },
+            )
     }, [])
 
     return (
@@ -75,20 +75,20 @@ export default function Album() {
                 <Toolbar>
                     <AcUnitIcon sx={{ mr: 2 }} />
                     <Typography variant="h6" color="inherit" noWrap>
-                    กับข้าวกับปลา
+                        กับข้าวกับปลา
                     </Typography>
-                    <Button  variant= "h6"startIcon={<ShoppingCartIcon color='inherit' noWrap/>}>
+                    <Button variant="h6" startIcon={<ShoppingCartIcon color='inherit' noWrap />}>
                     </Button>
                 </Toolbar>
             </AppBar>
             <main>
-            <ButtonGroup aria-label="Basic example">
-                            <Button variant="secondary">โปรโมชั่น</Button>
-                            <Button variant="secondary">ของหวาน</Button>
-                            <Button variant="secondary">ของคาว</Button>
-                            <Button variant="secondary">เครื่องดื่ม</Button>
-                            <Button variant="secondary">ของทานเล่น</Button>
-                        </ButtonGroup>
+                <ButtonGroup aria-label="Basic example">
+                    <Button variant="secondary" >โปรโมชั่น</Button>
+                    <Button variant="secondary" >ของหวาน</Button>
+                    <Button variant="secondary">ของคาว</Button>
+                    <Button variant="secondary">เครื่องดื่ม</Button>
+                    <Button variant="secondary">ของทานเล่น</Button>
+                </ButtonGroup>
                 <Container sx={{ py: 8 }} maxWidth="md">
                     {/* End hero unit */}
                     <Grid container spacing={4}>

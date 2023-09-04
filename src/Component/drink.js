@@ -59,7 +59,7 @@ const defaultTheme = createTheme();
 export default function Album() {
     const [menu, setMenu] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:3000/menu/dish")
+      fetch("http://localhost:3000/menu/drink")
         .then(res => res.json())
         .then(
           (result) => {
@@ -84,8 +84,8 @@ export default function Album() {
             <main>
             <ButtonGroup aria-label="Basic example">
                             <Button variant="secondary">โปรโมชั่น</Button>
-                            <Button variant="secondary">ของหวาน</Button>
                             <Button variant="secondary">ของคาว</Button>
+                            <Button variant="secondary">ของหวาน</Button>                           
                             <Button variant="secondary">เครื่องดื่ม</Button>
                             <Button variant="secondary">ของทานเล่น</Button>
                         </ButtonGroup>
