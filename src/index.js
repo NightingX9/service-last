@@ -4,8 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './Login.js'
-import Album from './Album'
+import Login from './Login';
+import Admin from './Admin.js';
+import Cart from './cart.js';
+import Menu from './Menu.js';
+import Test from './Component/test.js';
+import Table from './Component/Table';
+import Dish from './Component/dish';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +18,13 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}></Route>
       <Route path="/login" element={<Login/>}></Route>
-      <Route path="/album" element={<Album />}></Route>
+      <Route path="/admin" element={<Admin/>}></Route>
+      <Route path="/menu" element={<Menu/>}></Route>
+      <Route path="/cart" element={<Cart/>}></Route>
+      <Route path="/test" element={<Test/>}></Route>
+      <Route path="/table" element={<Table/>}></Route>
+      <Route path="/menu/dish" element={<Dish/>}></Route>
+      
 
     </Routes>
   </BrowserRouter>
